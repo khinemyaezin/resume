@@ -1,0 +1,39 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --config webpack.config.js --open",
+    "build": "webpack --config webpack.config.js && mkdir -p dist/content && cp -R content/. dist/content/",
+    "preview": "serve dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khinemyaezin/resume.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khinemyaezin/resume/issues"
+  },
+  "homepage": "https://github.com/khinemyaezin/resume#readme",
+  "description": "Webpack + TypeScript markdown renderer",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.3",
+    "serve": "^14.2.4",
+    "source-map-loader": "^5.0.0",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.2",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.2.0"
+  },
+  "dependencies": {
+    "dompurify": "^3.0.0",
+    "highlight.js": "^11.0.0",
+    "marked": "^9.0.0"
+  }
+}
