@@ -2,8 +2,6 @@
 
 Backend engineer specializing in digital banking and payment platforms, with experience in enterprise integrations, high-volume transaction systems, and scalable middleware design. Passionate about building reliable systems that balance performance and security.
 
----
-
 ## PROFESSIONAL EXPERIENCE
 
 ### Software Engineer - Optimum Solution / UOB
@@ -36,41 +34,45 @@ Yangon, Myanmar Aug 2019 – Aug 2021
 ---
 
 ## FEATURED PROJECTS
-### Personal Internet Banking — Fraud Surveillance — UOB
+### Personal Internet Banking  — Fraud Surveillance 
+`Spring Boot` `Apache Camel` `Control-M` `Spring batch` `Splunk` `EJB` `Oracle`
+
 A fraud surveillance module within the Personal Internet Banking system that temporarily held funds during transfers to enhance security and compliance, with configurable manual and automated release mechanisms.
 
 - Implemented fraud surveillance capabilities across mobile and web payment APIs supporting multi-country transaction processing.
 - Designed and developed enterprise integration workflows connecting core banking and external payment systems.
 - Developed automated batch processes for scheduled fund releases and compliance reporting.
 
-`Spring Boot` `Apache Camel` `Control-M` `Spring batch` `Splunk` `EJB` `Oracle`
+[Link](https://www.uob.com.sg/personal/digital-banking/pib/index.page)
 
-### Business Internet Banking — Yoma Bank
+### BIZ Space
+`Spring boot` `Oracle` `GreyLog` `Microservice`
+
 Enterprise digital banking system supporting corporate account management and high-volume transaction processing.
 
 - Designed and implemented scalable microservices delivering business banking capabilities.
 - Integrated core banking services and third-party biller APIs to enable end-to-end transaction workflows.
 - Monitored production systems through log analysis to ensure operational stability.
 
-`Spring boot` `Oracle` `GreyLog` `Microservice`
+[Link](https://www.yomabank.com/en/business/)
 
-### Bank Admin Portal — Yoma Bank
+### Bank Administration Portal
+`Spring boot` `Spring Webflux` `Mongo` `Angular` `Keycloak`
+
 An administrative module enabling bank operation officers to manage account permissions, user access, transfer controls, transaction limits, and audit monitoring to ensure secure and compliant operations.
 
 - Implemented reactive middleware services integrating with identity systems to optimize system utilization.
 - Developed an administrative dashboard supporting operational and user management functions.
 
-`Spring boot` `Spring Webflux` `Mongo` `Angular` `Keycloak`
+### Auderbox — E‑Commerce
+`Java 8` `Spring Framework` `Angular` `Microsoft SQL Server` `Google Maps API` `SAP BAPI`
 
-### E‑Commerce — Myanmar Information Technology
 A retail eCommerce platform supporting transaction processing, inventory management, sales reporting, order fulfillment, and delivery tracking, with recommendation features to optimize vendor merchandise placement.
 
 - Designed and implemented Inventory, Order, Delivery, Route Scheduler, and Reporting APIs.
 - Developed surveyor APIs leveraging geolocation services to analyze surroundings and propose optimal merchandise placement based on contextual data.
 - Created an administrative dashboard to monitor stock levels and track delivery routes.
 - Contributed to SAP BAPI integration to support accounting functionality.
-
-`Java 8` `Spring Framework` `Angular` `Microsoft SQL Server` `Google Maps API` `SAP BAPI`
 
 ---
 
@@ -91,3 +93,7 @@ Collaboration, Adaptability, Passion, Problem-solving
 
 ### Language Proficiency 
 English
+
+## EDUCATION
+
+**Bachelor of Science** - Pyay University
