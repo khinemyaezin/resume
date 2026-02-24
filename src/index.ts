@@ -11,7 +11,7 @@ async function renderMarkdown(): Promise<void> {
   }
 
   try {
-    const response = await fetch('/content/resume.md', { cache: 'no-store' });
+    const response = await fetch('./content/resume.md', { cache: 'no-store' });
     if (!response.ok) {
       throw new Error(`HTTP ${response.status} loading markdown`);
     }
