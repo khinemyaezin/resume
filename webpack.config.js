@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
@@ -32,16 +33,27 @@ module.exports = {
     ]
   },
   devServer: {
-    static: {
-      directory: path.resolve(__dirname, 'content'),
-      publicPath: '/content'
-    },
     compress: true,
     port: 4173,
     hot: true,
     open: false
   },
   plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'README.md'),
+          to: 'content/resume.md'
+        },
+        {
+          from: path.resolve(__dirname, 'content'),
+          to: 'content',
+          globOptions: {
+            ignore: ['**/resume.md']
+          }
+        }
+      ]
+    }),
     new HtmlWebpackPlugin({
       template: './src/template.html',
       minify: false
