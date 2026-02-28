@@ -3,6 +3,11 @@ import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 
 const contentEl = document.querySelector('#content');
+const exportBtn = document.querySelector<HTMLButtonElement>('#export-pdf-btn');
+
+function exportAsPdf(): void {
+  window.print();
+}
 
 async function renderMarkdown(): Promise<void> {
   if (!contentEl) {
@@ -23,6 +28,10 @@ async function renderMarkdown(): Promise<void> {
     console.error(error);
     contentEl.innerHTML = '<p>Could not render the .md file.</p>';
   }
+}
+
+if (exportBtn) {
+  exportBtn.addEventListener('click', exportAsPdf);
 }
 
 renderMarkdown();

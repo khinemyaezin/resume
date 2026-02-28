@@ -1,6 +1,13 @@
+# Khine Myae Zin
+
+[`Whatsapp`](https://wa.me/+6581199962) [`Email`](mailto:hello@khinemyaezin.com)
+
+
 ## SUMMARY 
 
 Backend engineer specializing in digital banking and payment platforms, with experience in enterprise integrations, high-volume transaction systems, and scalable middleware design. Passionate about building reliable systems that balance performance and security.
+
+---
 
 ## PROFESSIONAL EXPERIENCE
 
@@ -84,7 +91,7 @@ A retail eCommerce platform supporting transaction processing, inventory managem
 | Language | Java, Javascript, CSS, HTML  |
 | Framework | Spring, Spring WebFlux, Apache Camel, Angular, JUnit, Mockito, Hibernate |
 | Database | MySQL, Postgresql, Oracle, MSSQL |
-| Archetechure | Contact-Driven Testing, Domain Driven Design, Microservice |
+| Architecture | Contact-Driven Testing, Domain Driven Design, Microservice |
 | Tools | Docker, Jenkins, Bitbucket, SonarQube, Maven, Jira, Splunk |
 | Others | MQ, JMS, Kafka, gRPC, REST, Control-M |
 
