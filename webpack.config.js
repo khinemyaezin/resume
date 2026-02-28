@@ -1,5 +1,34 @@
 const path = require('path');
+const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+class EmitResumeFromReadmePlugin {
+  apply(compiler) {
+    compiler.hooks.thisCompilation.tap('EmitResumeFromReadmePlugin', (compilation) => {
+      const readmePath = path.resolve(compiler.context, 'README.md');
+      compilation.fileDependencies.add(readmePath);
+
+      compilation.hooks.processAssets.tap(
+        {
+          name: 'EmitResumeFromReadmePlugin',
+          stage: compiler.webpack.Compilation.PROCESS_ASSETS_STAGE_ADDITIONAL
+        },
+        () => {
+          if (!fs.existsSync(readmePath)) {
+            compilation.warnings.push(new Error('[EmitResumeFromReadmePlugin] README.md not found.'));
+            return;
+          }
+
+          const markdown = fs.readFileSync(readmePath, 'utf8');
+          compilation.emitAsset(
+            'content/resume.md',
+            new compiler.webpack.sources.RawSource(markdown)
+          );
+        }
+      );
+    });
+  }
+}
 
 module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
@@ -42,6 +71,7 @@ module.exports = {
     open: false
   },
   plugins: [
+    new EmitResumeFromReadmePlugin(),
     new HtmlWebpackPlugin({
       template: './src/template.html',
       minify: false
